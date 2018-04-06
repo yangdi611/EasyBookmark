@@ -3,14 +3,14 @@
 
 [TOC]
 
-<br><br>
+<br>
 >本笔记是通过学习[《Laravel入门教程》](https://laravel-china.org/courses/laravel-essential-training-5.5/543/about-the-book)形成的笔记，感兴趣的同学可以去买一本。本文内容也大多出自[这个网站](https://laravel-china.org)。
 
 <br>
->这些网站可以用作资源查询网站:
-https://laravel-china.org   中文，通过实际的搭建微博、BBS网站来系统学习Laravel。
-http://laravelacademy.org   中文，官方文档翻译。
-https://getbootstrap.com
+> 这些网站可以用作资源查询网站:<br\>
+> https://laravel-china.org   中文，通过实际的搭建微博、BBS网站来系统学习Laravel。<br\>
+> http://laravelacademy.org   中文，官方文档翻译。<br\>
+> https://getbootstrap.com
 
 ## 在开始之前我们需要弄懂几个工具：
 
