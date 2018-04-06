@@ -7,10 +7,10 @@
 >本笔记是通过学习[《Laravel入门教程》](https://laravel-china.org/courses/laravel-essential-training-5.5/543/about-the-book)形成的笔记，感兴趣的同学可以去买一本。本文内容也大多出自[这个网站](https://laravel-china.org)。
 
 <br/>
->这些网站可以用作资源查询网站:
-https://laravel-china.org   中文，通过实际的搭建微博、BBS网站来系统学习Laravel。
-http://laravelacademy.org   中文，官方文档翻译。
-https://getbootstrap.com
+>这些网站可以用作资源查询网站:<br>
+https://laravel-china.org   中文，通过实际的搭建微博、BBS网站来系统学习Laravel。<br>
+http://laravelacademy.org   中文，官方文档翻译。<br>
+https://getbootstrap.com<br>
 
 ## 在开始之前我们需要弄懂几个工具：
 
@@ -21,7 +21,7 @@ Composer 是 PHP 的一个依赖管理工具。它允许你申明项目所依赖
     他会根据你目录中的`composer.json`来判断你有那些dependencies。
 
 这是一个列子：
-    
+
     "name": "laravel/laravel",
         "description": "The Laravel Framework.",
         "keywords": ["framework", "laravel"],
@@ -60,7 +60,7 @@ Composer 是 PHP 的一个依赖管理工具。它允许你申明项目所依赖
                 ]
             }
         },
-        
+
 ### 2. Homebrew
 
 Homebrew 是用来安装MAC OS上没有预装但是在开发或者其他过程中需要用到的东西。Homebrew 会将软件包安装到独立目录，并将其文件软链接至 `/usr/local `。
@@ -109,7 +109,7 @@ export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 * 通过compower安装Valet: `composer global require laravel/valet`
 * 运行`valet install`来安装Valet，同时Valet将随着系统一起启动。
 * 如果需要修改domain的话使用: `valet domain <tld-name>` 比如 `app`，则访问的URL会变成`<site>.app`
-* 将httproot目录进行绑定: 在需要绑定的目录中运行 
+* 将httproot目录进行绑定: 在需要绑定的目录中运行
 `valet park`。完成绑定后既可以通过浏览器进行访问。
 
 ### 2. 使用GitHub仓库进行项目管理
@@ -122,7 +122,7 @@ export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 <br>
 <br>
 OK，目前开发环境都已经具备了，下面将开始我们的开发。
- 
+
 ## 开始构建我们第一个app，Easybookmark
 >经过之前的一次跟laravel-china的练习，基本了解了MVC的运作方式，下面开始半借鉴课程的内容，半自己开发一个书签类应用作为练习。
 
@@ -157,12 +157,3 @@ DB_PASSWORD=
 ```
 MAIL_DRIVER=log
 ```
-
-
-
-
-
-
-
-
-
