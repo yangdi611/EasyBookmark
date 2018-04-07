@@ -10071,6 +10071,14 @@ header .nav-item:hover {
   color: #f8f8ff;
 }
 
+#logout {
+  cursor: default;
+}
+
+#logout:hover {
+  background-color: transparent;
+}
+
 /* footer */
 
 footer #links .nav-item {
