@@ -10144,3 +10144,30 @@ section.user_info h1 {
   border-radius: 50%;
 }
 
+/* sign up */
+
+/* forms */
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+.card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* messages */
+
+.alert {
+  margin-top: 1em;
+}
+
