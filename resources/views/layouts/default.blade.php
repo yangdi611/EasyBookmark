@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>@yield('title', 'Sample App') - Easy Bookmark</title>
+    <title>@yield('title', 'Easy Bookmark') - Easy way to share your URLs!</title>
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>

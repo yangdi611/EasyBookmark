@@ -371,6 +371,10 @@ php artisan make:controller UsersController
 @stop
 ```
 
+### 2.5 当需要与数据库进行交互的时候就需要用到模型（Model)
+
+
+
 
 
 
