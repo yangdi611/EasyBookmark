@@ -305,6 +305,7 @@ class StaticPagesController extends Controller
 同时，`@yield('title' , 'Sample')`有两个参数，第一个参数是这个声明的名字，第二个参数Sample是他的default值。
 
 home.balde.php
+
 ```
 @extends('layouts.default')
 @section('title' , '主页')
@@ -312,6 +313,7 @@ home.balde.php
   <h1>主页</h1>
 @stop
 ```
+
 这样，我们就可以把layout.default这个模板嵌套进来，这样我们省去了每次都需要修改很多blade的麻烦。
 
 ##### Artisan
@@ -331,6 +333,45 @@ Artisan 是 Laravel 提供的 CLI（命令行接口），它提供了非常多�
 |php artisan db:seed 	|填充数据库|
 |php artisan tinker 	|进入 tinker 环境|
 |php artisan route:list 	|查看路由列表|
+
+##### 在路由中可以定义url的方式
+
+web.php
+
+```
+Route::get('/', 'StaticPagesController@home')->name('home');
+```
+
+可以使用->name('home');来定义这个路由。
+从而我们可以在blade中使用 {{route('home')}}来作为链接。
+`a href="{{ route('home') }}"`
+
+### 2.4 用户注册页面
+
+首先定义路由：
+
+```
+Route::get('signup', 'UsersController@create')->name('signup');
+```
+
+用artisan生成控制器
+
+```
+php artisan make:controller UsersController
+```
+
+建立静态页面视图`resources/views/users/create.balde.php`
+
+```
+@extends('layouts.default')
+@section('title', '注册')
+
+@section('content')
+<h1>注册</h1>
+@stop
+```
+
+
 
 
 

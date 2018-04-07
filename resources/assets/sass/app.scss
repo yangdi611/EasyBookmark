@@ -1,6 +1,7 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.proxy.ustclug.org/css?family=Raleway:100,300,400,600");
+@import url("https://at.alicdn.com/t/font_618316_m91z7so1rdi8jjor.css");
 
 // Variables
 @import "variables";
@@ -8,7 +9,110 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+section {
+  overflow: auto;
 }
+
+textarea {
+  resize: vertical;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 2;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  font-weight: 100;
+}
+
+/* header */
+
+header {
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .nav-item {
+    float: right;
+    margin-left: 10px;
+    font-size: 1em;
+    color: #dcdcdc;
+    text-decoration: none;
+    padding-top: 9px;
+    &:hover {
+      color: #f8f8ff;
+    }
+  }
+}
+
+footer {
+  #links{
+  .nav-item {
+    float: right;
+    font-size: 1em;
+    color: #dcdcdc;
+    text-decoration: none;
+    padding-top: 9px;
+    &:hover {
+      color: #f8f8ff;
+    }
+  }
+  p{
+    font-size: 35px;
+  }
+  li {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .navbar-text {
+    font-size: 35px;
+    color: #dcdcdc;
+  }
+  }
+}
+
+
+// header {
+//   a {
+//     color: #dcdcdc;
+//   }
+//   a:hover {
+//     color: #f8f8ff;
+//   }
+// }
