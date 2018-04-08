@@ -88,6 +88,10 @@ header {
   }
 }
 
+.dropdown-menu{
+  background-color: #fafafa;
+}
+
 /* footer */
 
 footer {
@@ -181,4 +185,15 @@ input {
 
 .alert{
   margin-top: 1em;
+}
+
+
+/* user edit */
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 100px;
+  }
 }

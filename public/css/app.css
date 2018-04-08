@@ -10079,6 +10079,10 @@ header .nav-item:hover {
   background-color: transparent;
 }
 
+.dropdown-menu {
+  background-color: #fafafa;
+}
+
 /* footer */
 
 footer #links .nav-item {
@@ -10177,5 +10181,17 @@ input {
 
 .alert {
   margin-top: 1em;
+}
+
+/* user edit */
+
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.gravatar_edit .gravatar {
+  float: none;
+  max-width: 100px;
 }
 
