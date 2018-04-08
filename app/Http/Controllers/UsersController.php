@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\User;
 use Auth;
+use Mail;
 
 class UsersController extends Controller
 {
@@ -13,9 +14,9 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('auth', [
-            'except' => ['show', 'create', 'store']
+            'except' => ['show', 'create', 'store', 'index', 'confirmEmail']
         ]);
-        
+
         $this->middleware('guest', [
             'only' => ['create']
         ]);
@@ -44,9 +45,9 @@ class UsersController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        Auth::login($user);
-        session()->flash('success', 'Welcome');
-        return redirect()->route('users.show', [$user]);
+        $this->sendEmailConfirmationTo($user);
+        session()->flash('success', 'An activation Email has been sent to your mail box, please check your Email.');
+        return redirect('/');
     }
 
     public function edit(User $user)
@@ -74,5 +75,32 @@ class UsersController extends Controller
         session()->flash('success', '个人资料更新成功！');
 
         return redirect()->route('users.show', $user->id);
+    }
+
+    protected function sendEmailConfirmationTo($user)
+    {
+        $view = 'emails.confirm';
+        $data = compact('user');
+        $from = 'yangdi@hotmail.com';
+        $name = 'Yang di';
+        $to = $user->email;
+        $subject = "Thank you for signing up EasyBookmark, please activate your account.";
+
+        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
+            $message->from($from, $name)->to($to)->subject($subject);
+        });
+    }
+
+    public function confirmEmail($token)
+    {
+        $user = User::where('activation_token', $token)->firstOrFail();
+
+        $user->activated = true;
+        $user->activation_token = null;
+        $user->save();
+
+        Auth::login($user);
+        session()->flash('success', 'Congrats, account activation succeeds.');
+        return redirect()->route('users.show', [$user]);
     }
 }
